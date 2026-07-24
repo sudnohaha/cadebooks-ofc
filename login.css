@@ -1,0 +1,16 @@
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
