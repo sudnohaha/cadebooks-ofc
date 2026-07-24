@@ -56,9 +56,16 @@ header {
 }
 
 #logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     text-decoration: none;
     color: white;
     cursor: pointer;
+}
+
+#logo img {
+    width: 52px;
 }
 
 #menu {
