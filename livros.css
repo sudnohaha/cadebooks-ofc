@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --roxo-principal: rgb(98, 0, 179);
+    --roxo-escuro: rgb(59, 0, 134);
+    --roxo-medio: rgb(180, 62, 143);
+    --roxo-claro: rgb(234, 122, 244);
+    --preto: rgb(22, 3, 22);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background: linear-gradient(135deg, var(--roxo-escuro), var(--preto));
+    color: white;
+    padding: 90px 100px 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(64, 47, 71, 0.5);
+    border: 1px solid rgba(199, 199, 199, 0.2);
+    backdrop-filter: blur(12px);
+    padding: 10px 100px;
+}
+
+#logo {
+    flex: 1;
+}
+
+#logo a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+#menu {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+#acoes {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.botao {
+    padding: 10px 20px;
+    background: white;
+    color: rgb(7, 1, 1);
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.botao:hover {
+    background-color: whitesmoke;
+}
+
+.pagina {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 0 48px;
+}
+
+.introducao {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.marca {
+    display: inline-block;
+    margin: 0 0 8px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(234, 122, 244, 0.2);
+    color: var(--roxo-claro);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.introducao h1 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+    color: white;
+}
+
+.texto-pequeno {
+    margin: 0 auto;
+    max-width: 700px;
+    color: #f4defe;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.lista-livros {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.cartao {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--preto);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    border: 2px solid var(--roxo-medio);
+}
+
+.cartao img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.texto-livro {
+    padding: 16px;
+}
+
+.texto-livro h2 {
+    margin: 0 0 8px;
+    color: var(--roxo-principal);
+    font-size: 1.1rem;
+}
+
+.texto-livro p {
+    margin: 0 0 12px;
+    color: #4b2a52;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.selecionar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--roxo-principal);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.selecionar input {
+    accent-color: var(--roxo-claro);
+}
+
+@media (max-width: 900px) {
+    body {
+        padding: 110px 20px 0;
+    }
+
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    #menu {
+        order: 3;
+        width: 100%;
+        padding-top: 10px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 700px) {
+    .lista-livros {
+        grid-template-columns: 1fr;
+    }
+
+    .introducao h1 {
+        font-size: 1.4rem;
+    }
+}
