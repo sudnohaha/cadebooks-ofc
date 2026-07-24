@@ -1,0 +1,98 @@
+:root {
+    --roxo-principal: rgb(98, 0, 179);
+    --roxo-escuro: rgb(59, 0, 134);
+    --roxo-medio: rgb(180, 62, 143);
+    --roxo-claro: rgb(234, 122, 244);
+    --preto: rgb(22, 3, 22);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, var(--roxo-escuro), var(--preto));
+    color: white;
+}
+
+.pagina {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 32px 20px 48px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.marca {
+    display: inline-block;
+    margin: 0 0 8px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(234, 122, 244, 0.2);
+    color: var(--roxo-claro);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.intro h1 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+    color: white;
+}
+
+.texto {
+    margin: 0 auto;
+    max-width: 700px;
+    color: #f2d7ff;
+    line-height: 1.5;
+}
+
+.lista-atividades {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.cartao {
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--preto);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    border: 2px solid var(--roxo-medio);
+}
+
+.cartao h2 {
+    margin: 0 0 8px;
+    color: var(--roxo-principal);
+    font-size: 1.1rem;
+}
+
+.cartao p {
+    margin: 0 0 12px;
+    line-height: 1.4;
+}
+
+.pontos {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--roxo-principal);
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .lista-atividades {
+        grid-template-columns: 1fr;
+    }
+
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+}
