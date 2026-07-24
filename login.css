@@ -52,7 +52,11 @@ body {
 
 .helper {
   font-size: 13px;
-  color: #0000;
+  color: rgb(0, 0, 0);
   text-align: center;
   margin-top:10px;
+}
+
+p {
+  color: black;
 }
