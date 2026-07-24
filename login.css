@@ -1,30 +1,58 @@
-form {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  background-color: antiquewhite;
-  border-radius: 10px;
-}
+* { box-sizing: border-box; }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(22, 3, 22);
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 50%;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.login-card {
+  width: 340px;
+  background: rgb(255, 255, 255);
+  color: #000;
+  padding: 28px;
+  border-radius: 50px;
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #dddfdd;
+    background: #fff;
+    color: #111;
+    font-size: 14px;
+    margin-bottom: 12px;
+    placeholder: #ababab;
+  }
 }
 
 .botao {
-    padding: 10px 20px;
-    background: #5a0000;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #fff;
+  background: rgb(98, 0, 179);
+  text-align: center;
 }
 
-.botao:hover {
-    background-color: rgb(0, 73, 138);
+.helper {
+  font-size: 13px;
+  color: #0000;
+  text-align: center;
+  margin-top:10px;
 }

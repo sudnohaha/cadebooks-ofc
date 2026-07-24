@@ -9,12 +9,16 @@
 </head>
 
 <body>
-    <form>
-        <label for="username">Nome de usuário:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
-        <a href="login.html" class="botao">Entrar</a>
+    <form class="login-card" action="#" method="post">
+        <h2>Entrar</h2>
+        <label for="username">Nome de usuário</label>
+        <input type="text" id="username" name="username" placeholder="Seu usuário" required>
+
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" placeholder="••••••" required>
+
+        <a href="index.html" class="botao">Entrar</a>
+        <p class="helper">Esqueceu a senha? <a href="index.html">Recuperar</a></p>
     </form>
 </body>
 
