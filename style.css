@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    align-items: center;
+}
+
+#nav-header{
+    
+    align-self: center;
+    position: absolute;
+    transform: translateX(-50%);
+    margin-left: 50%;
+}
+
+.acoes {
+    margin-left: auto;
+    display: flex;
+    gap: 25px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5a0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transform: translateX(-50%);
+}
+
+.botao:hover {
+    background-color: #003c80;
+}
