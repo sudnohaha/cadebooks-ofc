@@ -117,29 +117,68 @@ header {
 }
 
 .lista-livros {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    align-items: stretch;
 }
 
 .cartao {
+    flex: 0 0 220px;
     background: rgba(255, 255, 255, 0.95);
     color: var(--preto);
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     border: 2px solid var(--roxo-medio);
+    display: flex;
+    flex-direction: column;
 }
 
 .cartao img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    height: 260px;
+    object-fit: contain;
     display: block;
+    background: #f7ebff;
+    padding: 8px;
+}
+
+.cartao.vazio {
+    background: linear-gradient(135deg, rgba(234, 122, 244, 0.2), rgba(98, 0, 179, 0.2));
+    border: 2px dashed var(--roxo-medio);
+    justify-content: center;
+    align-items: center;
+}
+
+.mais-livros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px 16px;
+    color: var(--roxo-escuro);
+}
+
+.mais-livros span {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--roxo-principal);
+}
+
+.mais-livros h2 {
+    margin: 10px 0 0;
+    font-size: 1rem;
+    color: var(--roxo-escuro);
 }
 
 .texto-livro {
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .texto-livro h2 {
@@ -192,7 +231,13 @@ header {
 
 @media (max-width: 700px) {
     .lista-livros {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cartao {
+        width: 100%;
+        max-width: 280px;
     }
 
     .introducao h1 {
