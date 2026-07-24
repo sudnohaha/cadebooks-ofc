@@ -39,9 +39,23 @@ header {
 }
 
 #logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     text-decoration: none;
     color: white;
     cursor: pointer;
+}
+
+#logo img {
+    width: 52px;
+}
+
+#logo h1 {
+    margin: 0;
+    font-size: 50px;
+    font-family: 'Tommy', Arial, sans-serif;
+    color: white;
 }
 
 #menu {
